@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import { StyleSheet , Text, View, Button} from 'react-native';
 
-export default class button extends Component{
+export default class BasicBtn extends Component{
+  onPressButton1 = () => {
+    alert("ㅎㅇ");
+    }
     render() {
         return(
           <Button
-          style={{alignTop: 10}}
-          onPress={this.onPressLearnMore}
-          title="Learn More"
-          color="black"
+          onPress={this.onPressButton1}
+          title="더보기.."
+          color="green"
           />
         );
     }  

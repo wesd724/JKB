@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
 import Click from "./click";
+import BasicBtn from "./button";
+import Img from "./image";
 
 export default class JKB extends Component {
   render() {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true}/>
-        <Click />
         <View style={styles.lo1}/>
-        <Text style={styles.text1}>hello</Text>
-        <Text style={styles.text2}>World</Text>
+        <Click
+         buttonColor='blue'
+         onPress ={() => { alert('안녕');}}
+         title = '버튼'
+         />
+         <Click />
+         <Click />
+         <Click />
+        <Text style={styles.text1}>정규범</Text>
+        <Text style={styles.text2}>20살입니다</Text>
         <View style={styles.lo2}/>
+        <Img />
+         <BasicBtn />
       </View>
     );
   }  
@@ -38,7 +49,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     position: "absolute",
-    left: 200,
+    left: 210,
     top: 25,
   },
 });
