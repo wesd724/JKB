@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
-import Click from "./click";
-import BasicBtn from "./button";
-import Img from "./image";
+import Click from "./src/button/click";
+import BasicBtn from "./src/button/button";
+import Img from "./src/image/image";
 
 export default class JKB extends Component {
   render() {

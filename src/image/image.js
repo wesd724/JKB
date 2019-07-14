@@ -6,7 +6,7 @@ export default class Img extends Component {
         return (
         <Image style={styles.image}
           style={styles.image}
-          source={require('./images/1.png')}/>
+          source={require('../../images/1.png')}/>
         );
     }
 }
