@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
+import { createBottomTabNavigator, createAppContainer, TabBarBottom } from 'react-navigation';
+
 import Click from "./src/button/click";
 import BasicBtn from "./src/button/button";
 import Img from "./src/image/image";
+import FirstScreen from './src/screens/FirstScreen';
+import SecondScreen from './src/screens/SecondScreen';
+import ThirdScreen from './src/screens/ThirdScreen';
 
-export default class JKB extends Component {
+class JKB extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -13,11 +18,17 @@ export default class JKB extends Component {
         <Click
          buttonColor='blue'
          onPress ={() => { alert('안녕');}}
-         title = '버튼'
+         title = '버튼!'
          />
-         <Click />
-         <Click />
-         <Click />
+         <Click
+         title='First'
+         onPress={() => this.props.navigation.navigate('F')} />
+         <Click
+         title='Second'
+         onPress={() => this.props.navigation.navigate('S')} />
+         <Click
+         title='Third'
+         onPress={() => this.props.navigation.navigate('T')} />
         <Text style={styles.text1}>정규범</Text>
         <Text style={styles.text2}>20살입니다</Text>
         <View style={styles.lo2}/>
@@ -27,6 +38,15 @@ export default class JKB extends Component {
     );
   }  
 }
+
+const TabNavigator = createBottomTabNavigator({
+  Home: { screen: JKB },
+  F: { screen: FirstScreen },
+  S: { screen: SecondScreen },
+  T: { screen: ThirdScreen },
+});
+
+export default createAppContainer(TabNavigator);
 
 
 const styles = StyleSheet.create({
