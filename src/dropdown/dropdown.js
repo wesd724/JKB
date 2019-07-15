@@ -15,7 +15,7 @@ export default class Demo extends Component {
       var data = [["C", "Java", "JavaScript", "PHP"], ["Python", "Ruby"], ["Swift", "Objective-C"]];
       return (
         <View style={{flex: 1}}>
-          <View style={{height: 64}} />
+          <View style={{height: 0}} />
           <DropdownMenu
             style={{flex: 1}}
             bgColor={'white'}
@@ -47,5 +47,5 @@ export default class Demo extends Component {
           position: 'absolute',
           left: 90,
           top: 100,
-      }
+      },
   });

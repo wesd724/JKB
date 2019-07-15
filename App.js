@@ -11,6 +11,7 @@ import ThirdScreen from './src/screens/ThirdScreen';
 
 
 class JKB extends Component {
+
   static navigationOptions = { header: null };
 
     render() {
@@ -42,14 +43,14 @@ class JKB extends Component {
   }  
 }
 
-const TabNavigator = createStackNavigator({
+const Navigator = createStackNavigator({
   Home: JKB, 
-  F: FirstScreen ,
+  F: FirstScreen,
   S: SecondScreen,
   T: ThirdScreen,
 });
 
-export default createAppContainer(TabNavigator);
+export default createAppContainer(Navigator);
 
 
 const styles = StyleSheet.create({

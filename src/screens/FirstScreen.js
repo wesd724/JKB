@@ -1,20 +1,63 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Button } from 'react-native';
+
 import Demo from '../dropdown/dropdown';
 
+
 export default class FirstScreen extends Component {
-    render() {
+
+  static navigationOptions =  {
+    title: 'device',
+    // headerTitle: (
+    //   <View style={{
+    //     alignItems: 'center',
+    //   flex: 1,}}>
+    //     <Text style={{color: 'white'}}>
+    //       device
+    //     </Text>
+    //   </View>
+    // ),
+    headerStyle: {
+      backgroundColor: '#498045',
+      height: 30,
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontSize: 25,
+      position: 'absolute',
+      left: 95,
+      top: 0,
+    },
+    // headerLeft: (
+    //   <Button
+    //     onPress={() => alert('This is a button!')}
+    //     title="Home"
+    //     color="blue"
+    //   />
+    // ),
+    // headerRight: (
+    //   <Button
+    //   title='Second'
+    //   onPress={() => alert('hello!')} />
+    // ),
+  };
+
+  render() {
       return (
           <View style={styles.container}>
             <Demo />
           </View>
-      );
-    }
+    );
   }
+}
 
-  
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    }
-  });
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  hdst: {
+    alignItems: 'center',
+    flex: 1,
+  },
+});

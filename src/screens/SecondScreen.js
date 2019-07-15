@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, ScrollView, Image } from 'react-native';
 
 export default class SecondScreen extends Component {
+
+  static navigationOptions =  {
+    title: 'device',
+    headerStyle: {
+      backgroundColor: '#E8683A',
+      height: 30,
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontSize: 25,
+      position: 'absolute',
+      left: 95,
+      top: 0,
+    },
+  };
   render() {
     return (
       <ScrollView style={styles.sye}>
@@ -20,6 +35,7 @@ export default class SecondScreen extends Component {
 const styles = StyleSheet.create ({
   sye: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#E7E892',
   },
 });
+
