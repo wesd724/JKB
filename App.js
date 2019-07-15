@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
-import { createBottomTabNavigator, createAppContainer, TabBarBottom } from 'react-navigation';
+import { StyleSheet, Text, View, StatusBar, ScrollView, Image } from 'react-native';
+import { createBottomTabNavigator, createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Click from "./src/button/click";
 import BasicBtn from "./src/button/button";
@@ -9,8 +9,11 @@ import FirstScreen from './src/screens/FirstScreen';
 import SecondScreen from './src/screens/SecondScreen';
 import ThirdScreen from './src/screens/ThirdScreen';
 
+
 class JKB extends Component {
-  render() {
+  static navigationOptions = { header: null };
+
+    render() {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true}/>
@@ -39,11 +42,11 @@ class JKB extends Component {
   }  
 }
 
-const TabNavigator = createBottomTabNavigator({
-  Home: { screen: JKB },
-  F: { screen: FirstScreen },
-  S: { screen: SecondScreen },
-  T: { screen: ThirdScreen },
+const TabNavigator = createStackNavigator({
+  Home: JKB, 
+  F: FirstScreen ,
+  S: SecondScreen,
+  T: ThirdScreen,
 });
 
 export default createAppContainer(TabNavigator);
