@@ -2,15 +2,22 @@ import React, {Component} from 'react';
 import { StyleSheet , Text, View, Button} from 'react-native';
 
 export default class BasicBtn extends Component{
-  onPressButton1 = () => {
-    alert("ㅎㅇ");
+    static defaultProps = {
+      color: 'black',
+      onPress: () => null,
+      title: '이름 없음',
     }
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return(
           <Button
-          onPress={this.onPressButton1}
-          title="더보기.."
-          color="green"
+            onPress={this.props.onPress}
+            title={this.props.title}
+            color={this.props.color}
           />
         );
     }  

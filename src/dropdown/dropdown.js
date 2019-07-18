@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
 import DropdownMenu from 'react-native-dropdown-menu';
 
-export default class Demo extends Component {
+export default class Drdn extends Component {
  
     constructor(props) {
       super(props);
@@ -12,7 +12,7 @@ export default class Demo extends Component {
     }
     
     render() {
-      var data = [["C", "Java", "JavaScript", "PHP"], ["Python", "Ruby"], ["Swift", "Objective-C"]];
+      var data = [["C", "C++", "Java", "C#", "Python", "Javascript"], ["Rust", "Go", "Perl"], ["Assembly", "Fortran", "Lisp", "Cobol"]];
       return (
         <View style={{flex: 1}}>
           <View style={{height: 0}} />

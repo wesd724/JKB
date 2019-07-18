@@ -4,16 +4,16 @@ import { StyleSheet, Text, View, StatusBar, ScrollView, Image } from 'react-nati
 export default class SecondScreen extends Component {
 
   static navigationOptions =  {
-    title: 'device',
+    title: '스크롤 페이지',
     headerStyle: {
-      backgroundColor: '#E8683A',
+      backgroundColor: '#D1FF47',
       height: 30,
     },
-    headerTintColor: '#fff',
+    headerTintColor: '#000',
     headerTitleStyle: {
       fontSize: 25,
       position: 'absolute',
-      left: 95,
+      left: 63,
       top: 0,
     },
   };
@@ -25,8 +25,8 @@ export default class SecondScreen extends Component {
         <Text style={{fontSize:100}}>쭉쭉 내려간다</Text>
         <Text style={{fontSize:100}}>리액트 네이티브와</Text>
         <Text style={{fontSize:100}}>expo의 합작품은</Text>
-        <Text style={{fontSize:100}}>초등학생들도, 그 아래의 사람들도 할 수 있는</Text>
-        <Text style={{fontSize:100}}>엄청난 어플 개발 도구야</Text>
+        <Text style={{fontSize:100}}>초등학생들도, 더 어린 사람들도 쉽게 할 수 있는</Text>
+        <Text style={{fontSize:100}}>엄청난 어플 개발 도구이다</Text>
       </ScrollView>
     );
   }
@@ -35,7 +35,7 @@ export default class SecondScreen extends Component {
 const styles = StyleSheet.create ({
   sye: {
     flex: 1,
-    backgroundColor: '#E7E892',
+    backgroundColor: '#FFF4C1',
   },
 });
 

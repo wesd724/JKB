@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Button } from 'react-native';
 
-import Demo from '../dropdown/dropdown';
+import Drdn from '../dropdown/dropdown';
 
 
 export default class FirstScreen extends Component {
 
   static navigationOptions =  {
-    title: 'device',
+    title: '드랍다운 페이지',
     // headerTitle: (
     //   <View style={{
     //     alignItems: 'center',
@@ -25,7 +25,7 @@ export default class FirstScreen extends Component {
     headerTitleStyle: {
       fontSize: 25,
       position: 'absolute',
-      left: 95,
+      left: 50,
       top: 0,
     },
     // headerLeft: (
@@ -45,7 +45,7 @@ export default class FirstScreen extends Component {
   render() {
       return (
           <View style={styles.container}>
-            <Demo />
+            <Drdn />
           </View>
     );
   }
@@ -55,9 +55,6 @@ export default class FirstScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  hdst: {
-    alignItems: 'center',
-    flex: 1,
+    backgroundColor: '#DAFED5',
   },
 });
