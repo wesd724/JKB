@@ -6,7 +6,7 @@ export default class Decay extends Component {
     constructor(props){
         super(props);
         this.state = {
-        value: new Animated.Value(0),
+        // value: new Animated.Value(0),
         position: new Animated.ValueXY({x:0, y:0}),
         };
     }
@@ -19,7 +19,7 @@ export default class Decay extends Component {
         Animated.decay (
             this.state.position, {
             toValue : {x:100, y:0},
-            velocity : 0.63
+            velocity : 0.63,
         }).start();
     }
 

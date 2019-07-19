@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import Timing from '../animation/timing';
+import Timing1 from '../animation/timing1';
+import Timing2 from '../animation/timing2';
+import Timing3 from '../animation/timing3';
 import Spring from '../animation/spring';
 import Decay from '../animation/decay';
+import Fade from '../animation/fade';
 
 export default class App extends Component {
 
@@ -24,11 +27,13 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Timing />
+        <Fade />
+        <Timing1 />
         <Spring />
-        <Timing />
+        <Timing2 />
         <Decay />
-        <Timing />
+        <Timing3 />
+        <Fade />
       </View>
     );
   }
