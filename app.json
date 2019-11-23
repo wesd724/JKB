@@ -3,7 +3,7 @@
     "name": "JKB",
     "slug": "JKB",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
+    "sdkVersion": "35.0.0",
     "android": {
       "package": "com.company.jkb"
     },
@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
   }
 }
