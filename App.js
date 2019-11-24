@@ -8,12 +8,17 @@ import Img from "./src/image/image";
 import FirstScreen from './src/screens/FirstScreen';
 import SecondScreen from './src/screens/SecondScreen';
 import ThirdScreen from './src/screens/ThirdScreen';
+import YoutubeScreen from './src/screens/YoutubeScreen';
+import WebsiteScreen from './src/screens/WebsiteScreen';
 
 
 class JKB extends Component {
+  
+  at() {
+    alert('리액트 네이티브 expo를 이용한 어플입니다. 열심히 만들었습니다.');
+  }
 
   static navigationOptions = { header: null };
-
     render() {
     return (
       <View style={styles.container}>
@@ -21,7 +26,7 @@ class JKB extends Component {
         <View style={styles.lo1}/>
         <Click
          buttonColor='blue'
-         onPress ={() => { alert('리액트 네이티브 expo를 이용한 어플입니다. 열심히 만들었습니다.');}}
+         onPress ={this.at}
          title = '어플 소개'
          />
          <Click
@@ -33,6 +38,14 @@ class JKB extends Component {
          <Click
          title='Third'
          onPress={() => this.props.navigation.navigate('T')} />
+         <Click
+         title='Youtube'
+         buttonColor='red'
+         onPress={() => this.props.navigation.navigate('Y')} />
+         <Click
+         title='MyPage'
+         buttonColor='#E8A45A'
+         onPress={() => this.props.navigation.navigate('W')} />
         <Text style={styles.text1}>정규범</Text>
         <Text style={styles.text2}>20살입니다</Text>
         <View style={styles.lo2}/>
@@ -54,6 +67,8 @@ const Navigator = createStackNavigator({
   F: FirstScreen,
   S: SecondScreen,
   T: ThirdScreen,
+  Y: YoutubeScreen,
+  W: WebsiteScreen
 });
 
 export default createAppContainer(Navigator);
