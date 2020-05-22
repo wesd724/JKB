@@ -3,7 +3,7 @@
     "name": "JKB",
     "slug": "JKB",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "sdkVersion": "36.0.0",
     "android": {
       "package": "com.company.jkb"
     },
